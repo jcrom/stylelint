@@ -1,5 +1,6 @@
 # 7.0.0
 
+- Removed: `--extract` and `extractSyleTagsFromHtml` options. Instead, [build](/docs/developer-guide/processors.md) and [use](/docs/user-guide/configuration#processors.md) processors.
 - Removed: `"emptyLineBefore"` option for `declaration-block-properties-order`. If you use this option, please consider creating a plugin for the community. See the [release planning](/docs/user-guide/release-planning.md) document for more details.
 - Removed: `"single-where-required"`, `"single-where-recommended"`, `"single-unless-keyword"`, `"double-where-required"`, `"double-where-recommended"` and `"double-unless-keyword"` options for `font-family-name-quotes`. Instead, use the `"always-unless-keyword"`, `always-where-recommended` or `always-where-required` options together with the `string-quotes` rule.
 - Removed: `"single"`, `"double"` and `"none"` options for `function-url-quotes`. Instead, use the `"always"` or `"never"` options together with the `string-quotes` rule.
@@ -16,7 +17,8 @@
 - Changed: files matching ignore patterns no longer receive an "info"-severity message, which was always printed by the string formatter. Instead, the file's stylelint result object receives an `ignored: true` property, which various formatters can use as needed. The standard string formatter prints nothing for ignored files; but in `--verbose` mode, ignored files are included in the filelist.
 - Changed: `comment-word-blacklist` no longer ignores words within copyright  comments
 - Added: non-standard syntaxes are automatically inferred from file extensions `.scss`, `.less`, and `.sss`.
-- Fixed: The string options of `comment-word-blacklist` will now identify strings *within* comments. 
+- Added: [processors](/docs/user-guide/configuration#processors.md).
+- Fixed: The string options of `comment-word-blacklist` will now identify strings *within* comments.
 
 # 6.7.1
 
